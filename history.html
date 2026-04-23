@@ -1,0 +1,1086 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Online Courses for College Credit, Exam Prep & K-12 | Study.com</title>
+
+    <meta
+      name="description"
+      content="Comprehensive online education platform offering courses for college credit, exam preparation, and K-12 learning. Access educational resources, study materials, and interactive lessons for students of all ages." />
+    <meta
+      name="keywords"
+      content="education, online courses, college credit, exam prep, K-12, learning, study, tutoring, homework help, test preparation, academic, school, university, degree, certification, educational resources, online learning, distance education, e-learning, students, teachers, curriculum, lessons, practice tests, study guides, educational technology, STEM education, math, science, history, english, literature, writing, reading comprehension, SAT prep, ACT prep, AP courses, college preparation, high school, middle school, elementary school, homeschool, educational videos, interactive learning, academic success, student resources, educational platform" />
+    <meta name="author" content="Study.com" />
+    <meta name="category" content="Education" />
+    <meta name="robots" content="index,follow" />
+    <meta name="google-adsense-account" content="ca-pub-4709891994118652" />
+    <meta name="theme-color" content="#2b2b2b" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="canonical" href="https://study.com" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Online Courses for College Credit, Exam Prep &amp; K-12 | Study.com" />
+    <meta
+      property="og:description"
+      content="Take online courses on Study.com that are fun and engaging. Pass exams to earn real college credit. Research schools and degrees to further your education." />
+    <meta property="og:image" content="https://study.com/images/reDesign/home/social-image-1200x628.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:url" content="https://study.com" />
+    <meta property="og:site_name" content="study.com" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="style.css"></script>
+
+    <style>
+      #chat-wrapper {
+        height: 580px;
+      }
+
+      #chat-messages {
+        flex: 1;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 14px;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        scroll-behavior: smooth;
+      }
+
+      .message-bubble {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        max-width: 85%;
+        animation: fadeSlideUp 0.2s ease both;
+      }
+
+      .message-bubble-body {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .message-avatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: var(--primary);
+        flex-shrink: 0;
+        cursor: pointer;
+        transition:
+          transform 0.15s,
+          box-shadow 0.15s;
+        margin-top: 2px;
+      }
+
+      .message-avatar:hover {
+        transform: scale(1.15);
+        box-shadow: 0 0 10px currentColor;
+      }
+
+      .message-content-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        flex: 1;
+        min-width: 0;
+      }
+
+      .message-meta {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .message-username {
+        font-size: 0.88rem;
+        cursor: pointer;
+        transition: opacity 0.15s;
+      }
+      .message-username:hover {
+        opacity: 0.75;
+      }
+
+      .message-timestamp {
+        font-size: 0.72rem;
+        opacity: 0.38;
+        font-weight: 400;
+      }
+
+      .message-text {
+        font-size: 0.92rem;
+        font-weight: 400;
+        line-height: 1.5;
+        word-break: break-word;
+        white-space: pre-wrap;
+      }
+
+      .message-actions {
+        display: none;
+        flex-direction: row;
+        gap: 6px;
+        margin-top: 5px;
+        flex-wrap: wrap;
+      }
+      .message-bubble:hover .message-actions {
+        display: flex;
+      }
+
+      .message-reply-btn {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: var(--primary);
+        cursor: pointer;
+        font-size: 0.75rem;
+        font-family: inherit;
+        font-weight: bold;
+        padding: 4px 10px;
+        border-radius: 6px;
+        transition:
+          background 0.15s,
+          border-color 0.15s;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .message-reply-btn:hover {
+        background: rgba(255, 255, 255, 0.11);
+        border-color: var(--primary);
+      }
+
+      .message-delete-btn {
+        background: rgba(255, 60, 60, 0.07);
+        border: 1px solid rgba(255, 60, 60, 0.2);
+        color: #ff8080;
+        cursor: pointer;
+        font-size: 0.75rem;
+        font-family: inherit;
+        font-weight: bold;
+        padding: 4px 10px;
+        border-radius: 6px;
+        transition:
+          background 0.15s,
+          border-color 0.15s;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .message-delete-btn:hover {
+        background: rgba(255, 60, 60, 0.15);
+        border-color: rgba(255, 60, 60, 0.5);
+      }
+
+      .message-reply-preview {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.78rem;
+        font-weight: 400;
+        opacity: 0.55;
+        padding: 4px 10px;
+        margin-left: 42px;
+        border-left: 2px solid var(--primary);
+        border-radius: 0 4px 4px 0;
+        background: rgba(255, 255, 255, 0.04);
+        max-width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .message-reply-preview i {
+        color: var(--primary);
+        flex-shrink: 0;
+      }
+      .reply-to-name {
+        color: var(--primary);
+        font-weight: bold;
+        flex-shrink: 0;
+      }
+      .reply-to-content {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .message-bubble--private .message-bubble-body {
+        background: rgba(166, 76, 255, 0.06);
+        border-radius: 10px;
+        border: 1px solid rgba(166, 76, 255, 0.2);
+        padding: 6px 10px;
+      }
+      .message-private-badge {
+        font-size: 0.65rem;
+        background: rgba(166, 76, 255, 0.18);
+        color: #d699ff;
+        border: 1px solid rgba(166, 76, 255, 0.35);
+        padding: 1px 7px;
+        border-radius: 20px;
+        font-weight: bold;
+        letter-spacing: 0.04em;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        white-space: nowrap;
+      }
+
+      .message-crown-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        font-size: 0.65rem;
+        flex-shrink: 0;
+        position: relative;
+        cursor: default;
+        background: rgba(20, 20, 25, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: #ffffff;
+      }
+      .message-crown-badge i {
+        color: #ffffff;
+        pointer-events: none;
+      }
+      .message-crown-badge:hover::after {
+        content: "Site Owner";
+        position: absolute;
+        bottom: calc(100% + 5px);
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(15, 15, 15, 0.92);
+        color: #ffffff;
+        font-size: 0.68rem;
+        font-weight: bold;
+        font-family: inherit;
+        white-space: nowrap;
+        padding: 3px 8px;
+        border-radius: 6px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        pointer-events: none;
+        z-index: 100;
+      }
+
+      .chat-system-msg {
+        text-align: center;
+        font-size: 0.78rem;
+        opacity: 0.35;
+        font-weight: 400;
+        padding: 6px 0;
+        user-select: none;
+      }
+
+      #chat-reply-bar {
+        display: none;
+        align-items: center;
+        gap: 10px;
+        padding: 7px 12px;
+        background: rgba(122, 191, 255, 0.07);
+        border: 1px solid rgba(122, 191, 255, 0.2);
+        border-radius: 8px;
+        font-size: 0.82rem;
+        font-weight: 400;
+      }
+      #chat-reply-bar i {
+        color: var(--primary);
+        flex-shrink: 0;
+      }
+      #reply-bar-name {
+        color: var(--primary);
+        font-weight: bold;
+        flex-shrink: 0;
+      }
+      #reply-bar-text {
+        opacity: 0.6;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        flex: 1;
+        min-width: 0;
+      }
+      #reply-bar-cancel {
+        background: none;
+        border: none;
+        color: var(--primary);
+        opacity: 0.6;
+        cursor: pointer;
+        font-size: 1rem;
+        padding: 0 2px;
+        flex-shrink: 0;
+        transition: opacity 0.15s;
+      }
+      #reply-bar-cancel:hover {
+        opacity: 1;
+      }
+
+      #private-panel {
+        display: none;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      #private-recipients-input {
+        flex: 1;
+        min-width: 160px;
+        padding: 7px 12px;
+        background: rgba(0, 0, 0, 0.35);
+        border: 1px solid rgba(166, 76, 255, 0.3);
+        border-radius: 8px;
+        color: #fff;
+        font-family: inherit;
+        font-size: 0.84rem;
+        font-weight: 400;
+        transition: border-color 0.2s;
+      }
+      #private-recipients-input:focus {
+        outline: none;
+        border-color: rgba(166, 76, 255, 0.65);
+        box-shadow: 0 0 0 3px rgba(166, 76, 255, 0.12);
+      }
+      #private-recipients-input::placeholder {
+        opacity: 0.4;
+      }
+      #private-recipients-error {
+        width: 100%;
+        font-size: 0.78rem;
+        color: #ff8080;
+        font-weight: 400;
+      }
+
+      .chat-input-toolbar {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .chat-input-row {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .toggle-input {
+        display: none;
+      }
+      .toggleSwitch {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 40px;
+        height: 24px;
+        background-color: rgb(82, 82, 82);
+        border-radius: 20px;
+        cursor: pointer;
+        transition-duration: 0.2s;
+        flex-shrink: 0;
+      }
+      .toggleSwitch::after {
+        content: "";
+        position: absolute;
+        height: 8px;
+        width: 8px;
+        left: 4px;
+        background-color: transparent;
+        border-radius: 50%;
+        transition-duration: 0.2s;
+        box-shadow: 4px 2px 6px rgba(8, 8, 8, 0.26);
+        border: 4px solid white;
+      }
+      .toggle-input:checked + .toggleSwitch::after {
+        transform: translateX(100%);
+        transition-duration: 0.2s;
+        background-color: white;
+      }
+      .toggle-input:checked + .toggleSwitch {
+        background-color: #a64cff;
+        transition-duration: 0.2s;
+      }
+
+      .chat-private-toggle-wrap {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.78rem;
+        opacity: 0.6;
+        cursor: pointer;
+        user-select: none;
+        white-space: nowrap;
+        transition: opacity 0.15s;
+      }
+      .chat-private-toggle-wrap:hover {
+        opacity: 1;
+      }
+
+      .chat-input-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 0 2px;
+      }
+
+      #chat-input-error {
+        display: none;
+        font-size: 0.78rem;
+        color: #ff8080;
+        font-weight: 400;
+      }
+
+      #chat-char-counter {
+        font-size: 0.72rem;
+        opacity: 0.35;
+        font-weight: 400;
+        white-space: nowrap;
+      }
+
+      #chat-overlay-tos {
+        width: 92%;
+        max-width: 560px;
+        padding: 0;
+        text-align: left;
+        gap: 0;
+      }
+      .tos-header {
+        padding: 22px 24px 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .tos-header i {
+        font-size: 1.6rem;
+        color: var(--primary);
+        flex-shrink: 0;
+      }
+      .tos-header h2 {
+        margin: 0;
+        font-size: 1.4rem;
+        color: var(--neon-color);
+      }
+      .tos-header p {
+        margin: 4px 0 0;
+        font-size: 0.82rem;
+        opacity: 0.55;
+        font-weight: 400;
+      }
+      #tos-body {
+        max-height: 220px;
+        overflow-y: auto;
+        padding: 16px 24px;
+        font-size: 0.86rem;
+        line-height: 1.65;
+        font-weight: 400;
+        opacity: 0.85;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      #tos-body h3 {
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        color: var(--neon-color);
+        margin: 18px 0 6px;
+      }
+      #tos-body h3:first-child {
+        margin-top: 0;
+      }
+      #tos-body ul {
+        margin: 0 0 0 18px;
+        padding: 0;
+      }
+      #tos-body ul li {
+        margin-bottom: 5px;
+      }
+      #tos-body .tos-owner-note {
+        margin-top: 16px;
+        padding: 10px 14px;
+        background: rgba(255, 193, 7, 0.07);
+        border-left: 3px solid rgba(255, 193, 7, 0.5);
+        border-radius: 0 6px 6px 0;
+        color: #ffc107;
+        font-size: 0.82rem;
+        line-height: 1.55;
+      }
+      .tos-scroll-hint {
+        text-align: center;
+        font-size: 0.75rem;
+        opacity: 0.4;
+        font-weight: 400;
+        padding: 6px 24px 0;
+        font-style: italic;
+      }
+      .tos-agree-row {
+        padding: 14px 24px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .tos-agree-row input[type="checkbox"] {
+        width: 17px;
+        height: 17px;
+        accent-color: var(--primary);
+        cursor: pointer;
+        flex-shrink: 0;
+      }
+      .tos-agree-row input[type="checkbox"]:disabled {
+        opacity: 0.3;
+        cursor: default;
+      }
+      .tos-agree-row label {
+        font-size: 0.88rem;
+        font-weight: 400;
+        line-height: 1.4;
+        cursor: pointer;
+        user-select: none;
+      }
+      .tos-footer {
+        padding: 14px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      #tos-error {
+        font-size: 0.8rem;
+        color: #ff6060;
+        font-weight: 400;
+        flex: 1;
+      }
+
+      .chat-suspended-notice {
+        background: rgba(255, 60, 60, 0.1);
+        border: 1px solid rgba(255, 60, 60, 0.35);
+        border-radius: 12px;
+        padding: 14px 18px;
+        color: #ff8888;
+        font-size: 0.88rem;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .chat-suspended-notice i {
+        font-size: 1.2rem;
+        flex-shrink: 0;
+      }
+      .chat-suspended-notice strong {
+        display: block;
+        color: #ff6060;
+        margin-bottom: 2px;
+      }
+      .chat-suspended-notice span {
+        font-weight: 400;
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bg-static"></div>
+
+    <div class="bg-animation" id="bg-animation">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="blob blob-4"></div>
+      <div class="blob blob-5"></div>
+      <canvas id="particle-canvas"></canvas>
+    </div>
+    <div id="bottom-gradient-overlay"></div>
+
+    <div id="perf-container">
+      <div id="fps-counter" class="perf-counter">FPS: 0</div>
+      <div id="cpu-counter" class="perf-counter">CPU: 0%</div>
+      <div id="gpu-counter" class="perf-counter">GPU: 0%</div>
+    </div>
+
+  <nav class="nav">
+    <div class="nav-links-left">
+      <a href="index.html"><i class="fas fa-home"></i><span class="tooltip">Home</span></a>
+      <a href="math.html"><i class="fas fa-gamepad"></i><span class="tooltip">Games</span></a>
+      <a href="science.html"><i class="fa-solid fa-magnifying-glass"></i><span class="tooltip">Proxy</span></a>
+      <a href="history.html"><i class="fa-solid fa-comment"></i><span class="tooltip">Chat</span></a>
+    </div>
+    <div class="nav-links-right">
+      <a href="changelog.html"><i class="fa-solid fa-pencil"></i><span class="tooltip">Changelog</span></a>
+      <a href="https://discord.gg/ENWjJ45ptp"><i class="fa-brands fa-discord"></i><span class="tooltip">Discord</span></a>
+      <a href="information.html"><i class="fa-solid fa-at"></i><span class="tooltip">DMCA & Contact</span></a>
+      <a href="terms.html"><i class="fa-solid fa-book"></i><span class="tooltip">Terms of Service</span></a>
+      <a href="account.html"><i class="fa-solid fa-user"></i><span class="tooltip">Account</span></a>
+    </div>
+  </nav>
+
+    <main>
+      <section class="page-hero page-hero--short">
+        <div class="page-hero-content">
+          <h1 class="page-hero-title"><i class="fa-solid fa-comments"></i> Global Chat</h1>
+          <p class="page-hero-sub">Talk with everyone on Lunar in real time.</p>
+        </div>
+      </section>
+
+      <section class="section-wrapper chat-page-section">
+        <div class="chat-page-outer">
+          <div class="chat-page-wrapper blurred" id="chat-wrapper">
+            <div id="chat-messages">
+              <div class="message-bubble">
+                <div class="message-bubble-body">
+                  <div class="message-avatar" style="background: #4cff88"></div>
+                  <div class="message-content-wrap">
+                    <div class="message-meta">
+                      <strong class="message-username" style="color: #4cff88">User1</strong>
+                    </div>
+                    <div class="message-text">HELLOOOO</div>
+                  </div>
+                </div>
+              </div>
+              <div class="message-bubble">
+                <div class="message-bubble-body">
+                  <div class="message-avatar" style="background: #ff69b4"></div>
+                  <div class="message-content-wrap">
+                    <div class="message-meta">
+                      <strong class="message-username" style="color: #ff69b4">User2</strong>
+                    </div>
+                    <div class="message-text">HAIIIII &lt;3</div>
+                  </div>
+                </div>
+              </div>
+              <div class="message-bubble">
+                <div class="message-bubble-body">
+                  <div class="message-avatar" style="background: #00e5ff"></div>
+                  <div class="message-content-wrap">
+                    <div class="message-meta">
+                      <strong class="message-username" style="color: #00e5ff">User3</strong>
+                    </div>
+                    <div class="message-text">Lunar is the Best Site!</div>
+                  </div>
+                </div>
+              </div>
+              <div class="message-bubble">
+                <div class="message-bubble-body">
+                  <div class="message-avatar" style="background: #ff69b4"></div>
+                  <div class="message-content-wrap">
+                    <div class="message-meta">
+                      <strong class="message-username" style="color: #ff69b4">User2</strong>
+                    </div>
+                    <div class="message-text">So trueeee</div>
+                  </div>
+                </div>
+              </div>
+              <div class="message-bubble">
+                <div class="message-bubble-body">
+                  <div class="message-avatar" style="background: #ffd700"></div>
+                  <div class="message-content-wrap">
+                    <div class="message-meta">
+                      <strong class="message-username" style="color: #ffd700">User4</strong>
+                    </div>
+                    <div class="message-text">simply lovely</div>
+                  </div>
+                </div>
+              </div>
+              <div class="message-bubble">
+                <div class="message-bubble-body">
+                  <div class="message-avatar" style="background: #a64cff"></div>
+                  <div class="message-content-wrap">
+                    <div class="message-meta">
+                      <strong class="message-username" style="color: #a64cff">User5</strong>
+                    </div>
+                    <div class="message-text">Yessir</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-input-toolbar">
+              <div id="chat-reply-bar">
+                <i class="fa-solid fa-reply"></i>
+                <span>Replying to</span>
+                <span id="reply-bar-name"></span>
+                <span id="reply-bar-text"></span>
+                <button id="reply-bar-cancel" title="Cancel reply">&times;</button>
+              </div>
+
+              <div class="chat-input-row">
+                <input
+                  type="text"
+                  class="chat-input"
+                  id="chat-input"
+                  placeholder="Type a message..."
+                  maxlength="2000"
+                  autocomplete="off"
+                  disabled />
+                <button class="chat-btn" id="chat-send-btn" disabled>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </div>
+
+              <div class="chat-input-footer">
+                <label class="chat-private-toggle-wrap" title="Send only to specific users">
+                  <input type="checkbox" id="private-toggle" class="toggle-input" />
+                  <label for="private-toggle" class="toggleSwitch"></label>
+                  <i class="fa-solid fa-eye-slash" style="color: #a64cff"></i>
+                  Private
+                </label>
+                <span id="chat-input-error"></span>
+                <span id="chat-char-counter">0/2000</span>
+              </div>
+
+              <div id="private-panel">
+                <input
+                  type="text"
+                  id="private-recipients-input"
+                  placeholder="usernames, comma-separated (e.g. user1, user2)" />
+                <span id="private-recipients-error"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat-coming-soon-overlay" id="chat-overlay-loading">
+            <div class="chat-cs-icon"><i class="fa-solid fa-spinner fa-spin"></i></div>
+            <h2>Loading…</h2>
+            <p style="opacity: 0.5; font-weight: 400; font-size: 0.9rem">Checking your account.</p>
+          </div>
+
+          <div class="chat-coming-soon-overlay" id="chat-overlay-signedout" style="display: none">
+            <div class="chat-cs-icon"><i class="fa-solid fa-lock"></i></div>
+            <h2>Sign In to Chat</h2>
+            <p>Global Chat is only available to signed-in Lunar accounts.</p>
+            <p class="chat-cs-note">Head over to the Account page to sign in with Google - it only takes a second.</p>
+            <a href="account.html" class="hero-btn primary-btn" style="display: inline-flex; margin-top: 1rem">
+              <i class="fa-solid fa-user"></i> Go to Account
+            </a>
+          </div>
+
+          <div class="chat-coming-soon-overlay" id="chat-overlay-suspended" style="display: none">
+            <div class="chat-cs-icon" style="color: #ff6060"><i class="fa-solid fa-ban"></i></div>
+            <h2 style="color: #ff8888">Account Suspended</h2>
+            <p id="suspended-reason-text" style="opacity: 0.8"></p>
+            <p id="suspended-expiry-text" style="opacity: 0.55; font-weight: 400; font-size: 0.85rem"></p>
+            <a
+              href="account.html"
+              class="hero-btn ghost-btn"
+              style="display: inline-flex; margin-top: 1rem; border-color: #ff6060; color: #ff8888">
+              <i class="fa-solid fa-user"></i> View Account
+            </a>
+          </div>
+
+          <div class="chat-coming-soon-overlay" id="chat-overlay-tos" style="display: none">
+            <div class="tos-header">
+              <i class="fa-solid fa-file-contract"></i>
+              <div>
+                <h2>Chat Rules &amp; Terms</h2>
+                <p>Read everything below before joining the chat.</p>
+              </div>
+            </div>
+            <div id="tos-body">
+              <h3>Community Rules</h3>
+              <ul>
+                <li>No hate speech, slurs, or discrimination of any kind.</li>
+                <li>No harassment, bullying, or targeted attacks against other users.</li>
+                <li>No spam, flooding, or repeated messages.</li>
+                <li>No sharing of personal information (yours or others').</li>
+                <li>No NSFW content, explicit language, or inappropriate material.</li>
+                <li>No advertising, self-promotion, or unsolicited links.</li>
+                <li>No impersonation of other users.</li>
+                <li>Do not attempt to evade moderation and suspensions.</li>
+                <li>Be respectful. Treat others how you'd want to be treated.</li>
+              </ul>
+              <h3>Enforcement</h3>
+              <ul>
+                <li>Violations may result in a temporary or permanent chat suspension.</li>
+                <li>Suspended accounts can still sign in but cannot send or read live messages.</li>
+                <li>The severity and duration of a suspension is at the owner's discretion.</li>
+              </ul>
+              <h3>Private Messages</h3>
+              <ul>
+                <li>Lunar supports private messages visible only to chosen users.</li>
+                <li>Do not share sensitive personal information in any chat message.</li>
+              </ul>
+              <div class="tos-owner-note">
+                <i class="fa-solid fa-eye" style="margin-right: 6px"></i>
+                <strong>Owner visibility notice:</strong> The site owner can view <em>all</em> chat messages, including
+                private messages, for the purpose of moderation and safety. By using the chat, you
+                acknowledge and consent to this.
+              </div>
+            </div>
+            <p class="tos-scroll-hint">
+              <i class="fa-solid fa-arrow-down"></i> Scroll to the bottom to unlock the checkbox.
+            </p>
+            <div class="tos-agree-row">
+              <input type="checkbox" id="tos-checkbox" disabled />
+              <label for="tos-checkbox">I have read and agree to the Chat Rules &amp; Terms above.</label>
+            </div>
+            <div class="tos-footer">
+              <span id="tos-error"></span>
+              <button
+                id="tos-accept-btn"
+                class="hero-btn primary-btn"
+                style="font-size: 0.9rem; padding: 10px 22px"
+                disabled>
+                <i class="fa-solid fa-check"></i> Accept &amp; Enter Chat
+              </button>
+            </div>
+          </div>
+
+          <div id="chat-overlay-ready" style="display: none"></div>
+        </div>
+      </section>
+
+      <div class="page-footer">
+        <p>Lunar - Made with ❤️ and questionable life choices.</p>
+      </div>
+    </main>
+
+    <i id="settings-icon" class="fa-solid fa-cog"></i>
+
+    <dialog id="settings-dialog">
+      <div class="settings-header">
+        <h2><i class="fa-solid fa-cog"></i> Settings</h2>
+        <button id="close-settings-btn">&times;</button>
+      </div>
+      <div id="settings-dialog-content">
+        <div class="settings-grid">
+          <div class="settings-card">
+            <div class="settings-card-title"><i class="fa-solid fa-gauge-high"></i> Performance</div>
+            <div class="settings-card-body">
+              <button id="fps-counter-btn" class="settings-btn">
+                <i class="fa-solid fa-chart-line"></i> Toggle FPS Counter
+              </button>
+              <button id="cpu-counter-btn" class="settings-btn">
+                <i class="fa-solid fa-microchip"></i> Toggle CPU Utilization
+              </button>
+              <button id="gpu-counter-btn" class="settings-btn">
+                <i class="fa-solid fa-memory"></i> Toggle GPU Utilization
+              </button>
+              <p class="static-warning hidden">
+                <i class="fa-solid fa-circle-exclamation"></i> Unavailable while Static Background is active.
+              </p>
+              <button id="toggle-blobs-btn" class="settings-btn">
+                <i class="fa-solid fa-droplet"></i> Toggle Blobs
+              </button>
+              <button id="toggle-particles-btn" class="settings-btn">
+                <i class="fa-solid fa-star"></i> Toggle Particles
+              </button>
+            </div>
+          </div>
+          <div class="settings-card">
+            <div class="settings-card-title"><i class="fa-solid fa-palette"></i> Customization</div>
+            <div class="settings-card-body">
+              <p class="static-warning hidden">
+                <i class="fa-solid fa-circle-exclamation"></i> Custom Theme is unavailable while Static Background is
+                active.
+              </p>
+              <label for="theme-select" class="settings-label">Theme</label>
+              <select id="theme-select">
+                <option value="theme-blue">Sapphire (Default)</option>
+                <option value="theme-red">Garnet</option>
+                <option value="theme-green">Kombu</option>
+                <option value="theme-purple">Plum</option>
+                <option value="theme-orange">Rust</option>
+                <option value="theme-pink">Blossom</option>
+                <option value="theme-custom" id="custom-theme-option">Custom Theme</option>
+              </select>
+              <div id="custom-theme-editor" class="hidden">
+                <div class="color-picker-grid">
+                  <label class="color-picker-group"
+                    >Primary: <input type="color" id="custom-primary" value="#7abfff"
+                  /></label>
+                  <label class="color-picker-group"
+                    >Secondary: <input type="color" id="custom-secondary" value="#1c7686"
+                  /></label>
+                  <label class="color-picker-group"
+                    >Neon: <input type="color" id="custom-neon-color" value="#69e1ff"
+                  /></label>
+                  <label class="color-picker-group"
+                    >Background: <input type="color" id="custom-bg-color" value="#000000"
+                  /></label>
+                  <label class="color-picker-group"
+                    >Main Text: <input type="color" id="custom-main-text-color" value="#ffffff"
+                  /></label>
+                  <label class="color-picker-group"
+                    >Menu BG: <input type="color" id="custom-menu-bg-color" value="#000000"
+                  /></label>
+                  <label class="color-picker-group"
+                    >Dialog BG: <input type="color" id="custom-dialog-bg-color" value="#1e1e1e"
+                  /></label>
+                  <label class="color-picker-group"
+                    >Nav BG: <input type="color" id="custom-nav-bg-color" value="#1e1e1e"
+                  /></label>
+                  <label class="color-picker-group"
+                    >Particle: <input type="color" id="custom-particle-color" value="#ffffff"
+                  /></label>
+                  <label class="color-picker-group"
+                    >Settings BG: <input type="color" id="custom-settings-bg" value="#001e3c"
+                  /></label>
+                  <label class="color-picker-group"
+                    >Settings Text: <input type="color" id="custom-settings-text" value="#ffffff"
+                  /></label>
+                  <label class="color-picker-group"
+                    >Shadow: <input type="color" id="custom-settings-shadow" value="#7abfff"
+                  /></label>
+                  <label class="color-picker-group"
+                    >Heading: <input type="color" id="custom-settings-heading" value="#69e1ff"
+                  /></label>
+                </div>
+                <button id="save-custom-theme-btn" class="settings-btn" style="margin-top: 10px">
+                  <i class="fa-solid fa-palette"></i> Apply Custom Colors
+                </button>
+              </div>
+              <p id="gradient-disabled-warning" class="conflict-warning hidden"><i class="fa-solid fa-circle-exclamation"></i> Unavailable while Static Background is active.</p>
+              <button id="toggle-gradient-btn" class="settings-btn"><i class="fa-solid fa-brush"></i>Toggle Gradient</button>
+              <p id="static-bg-disabled-warning" class="conflict-warning hidden"><i class="fa-solid fa-circle-exclamation"></i> Unavailable while Gradient is active.</p>
+              <button id="toggle-static-bg-btn" class="settings-btn"><i class="fa-solid fa-image"></i> Toggle Static Background</button>
+              <button id="mute-notifs-btn" class="settings-btn">
+                <i class="fa-solid fa-bell"></i> Mute Notifications
+              </button>
+              <button id="mute-announce-btn" class="settings-btn">
+                <i class="fa-solid fa-bullhorn"></i> Mute Announcements
+              </button>
+            </div>
+          </div>
+          <div class="settings-card">
+            <div class="settings-card-title"><i class="fa-solid fa-gamepad"></i> Game Settings</div>
+            <div class="settings-card-body">
+              <label for="game-source-select" class="settings-label">Game Source</label>
+              <select id="game-source-select" style="margin-bottom: 10px">
+                <option value="both">Both (Default)</option>
+                <option value="sdk">SDK Only</option>
+                <option value="native">Native Only</option>
+              </select>
+              <label class="settings-label">LuminSDK</label>
+              <button id="lumin-status-btn" class="settings-btn">
+                <i class="fa-solid fa-network-wired"></i> Check Network Status
+              </button>
+            </div>
+          </div>
+          <div class="settings-card">
+            <div class="settings-card-title"><i class="fa-solid fa-mask"></i> Tab Cloak</div>
+            <div class="settings-card-body">
+              <label for="cloak-select" class="settings-label">Disguise as</label>
+              <select id="cloak-select">
+                <option value="none">None (Default)</option>
+                <option value="drive">Google Drive</option>
+                <option value="class">Google Classroom</option>
+                <option value="gmail">Gmail</option>
+                <option value="schoology">Schoology</option>
+                <option value="graphing">Desmos Graphing</option>
+                <option value="canva">Canva</option>
+                <option value="outlook">Outlook</option>
+              </select>
+              <button id="save-cloak-btn" class="settings-btn">
+                <i class="fa-solid fa-floppy-disk"></i> Save Cloak
+              </button>
+            </div>
+          </div>
+          <div class="settings-card">
+            <div class="settings-card-title"><i class="fa-solid fa-mobile-screen"></i> Display</div>
+            <div class="settings-card-body">
+              <p style="font-size: 0.85rem; opacity: 0.75; margin-bottom: 8px">
+                Mobile Mode shrinks the UI to fit smaller screens. It is applied automatically when a mobile device is
+                detected, but you can override it here.
+              </p>
+              <button id="toggle-mobile-mode-btn" class="settings-btn" data-mobile="auto">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <span id="mobile-mode-label">Mobile Mode: Auto</span>
+              </button>
+            </div>
+          </div>
+          <div class="settings-card">
+            <div class="settings-card-title"><i class="fa-solid fa-ellipsis"></i> Extra</div>
+            <div class="settings-card-body">
+              <button id="export-save-btn" class="settings-btn">
+                <i class="fa-solid fa-download"></i> Export Save Data
+              </button>
+              <button id="import-save-btn" class="settings-btn">
+                <i class="fa-solid fa-upload"></i> Import Save Data
+              </button>
+              <input type="file" id="import-save-input" accept=".lunarsave" style="display: none" />
+              <button id="version-info-btn" class="settings-btn">
+                <i class="fa-solid fa-info-circle"></i> Version Info
+              </button>
+              <button id="toggle-debug-btn" class="settings-btn"><i class="fa-solid fa-wrench"></i> Debug Mode</button>
+              <button onclick="window.location.href = 'admin.html'" class="settings-btn admin-btn">
+                <i class="fa-solid fa-lock"></i> Admin Login
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="announcement-dialog">
+      <h2 id="announcement-title">Loading...</h2>
+      <div class="announcement-content"><p id="announcement-message">Loading...</p></div>
+      <button id="announcement-continue-btn" class="settings-btn">Continue</button>
+    </dialog>
+    <dialog id="version-dialog">
+      <button id="close-version-btn">&times;</button>
+      <h2>Version Information</h2>
+      <div class="version-info-container">
+        <p><span>Current Version:</span> <span id="current-version-text">Loading...</span></p>
+        <p><span>Network Version:</span> <span id="network-version-text">Loading...</span></p>
+        <p><span>Status:</span> <span id="version-status" class="status status-checking">Loading...</span></p>
+      </div>
+    </dialog>
+    <dialog id="lumin-status-dialog">
+      <button id="close-lumin-status-btn">&times;</button>
+      <h2>LuminSDK Network Status</h2>
+      <div class="version-info-container">
+        <p>
+          <span><i class="fa-solid fa-server" style="color: var(--primary); margin-right: 8px"></i> a.luminsdk.com</span
+          ><span id="status-luminsdk" class="status status-checking">Checking...</span>
+        </p>
+        <p>
+          <span><i class="fa-solid fa-server" style="color: var(--primary); margin-right: 8px"></i> drkesten.com</span
+          ><span id="status-drkesten" class="status status-checking">Checking...</span>
+        </p>
+        <p>
+          <span><i class="fa-solid fa-server" style="color: var(--primary); margin-right: 8px"></i> milpagan.com</span
+          ><span id="status-milpagan" class="status status-checking">Checking...</span>
+        </p>
+      </div>
+    </dialog>
+    <dialog id="debug-dialog">
+      <div class="debug-header">
+        <h2>Debug Console</h2>
+        <button id="close-debug-btn">&times;</button>
+      </div>
+      <div class="debug-content">
+        <div class="debug-window">
+          <div class="window-title">Console Logs</div>
+          <div id="console-log-viewer" class="log-viewer"></div>
+        </div>
+        <div class="debug-window" style="height: 150px; flex: none">
+          <div class="window-title">Local Storage</div>
+          <div id="local-storage-viewer" class="storage-viewer"></div>
+        </div>
+        <div class="debug-actions">
+          <button id="clear-storage-btn" class="danger-btn">Clear Local Storage</button>
+        </div>
+      </div>
+    </dialog>
+
+    <div id="notification-container"></div>
+    <button id="global-debug-btn" class="hidden"><i class="fa-solid fa-wrench"></i></button>
+
+    <script src="js/config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/profile-card.js"></script>
+    <script src="js/chat-gate.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/debug.js"></script>
+    <script src="js/utility.js"></script>
+    <script src="js/events.js"></script>
+  </body>
+</html>
